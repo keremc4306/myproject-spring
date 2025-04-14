@@ -9,6 +9,6 @@ import com.myproject.spring.loginregister.models.ERole;
 import com.myproject.spring.loginregister.models.Role;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Integer>{
+public interface RoleRepository extends JpaRepository<Role, Long>{
     Optional<Role> findByName(ERole name);
 }
