@@ -5,6 +5,9 @@ import java.util.*;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+@Entity
+@Table(name = "users", uniqueConstraints = { @UniqueConstraint(columnNames = "username"),
+		@UniqueConstraint(columnNames = "email") })
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
